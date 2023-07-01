@@ -3,16 +3,17 @@ class Password {
     password:string;
     
     constructor(){
-        this.createPassword();
+        this.password = this.createPassword();
     }
 
-    createPassword():void {
-        this.password = '';
+    createPassword():string {
+        let password = '';
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         const charactersLength = characters.length;
         for (let i = 0; i < this.longitud; i++) {
-            this.password += characters.charAt(Math.floor(Math.random() * charactersLength));
+            password += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
+        return password;
     }
 
     getPassword():string {
