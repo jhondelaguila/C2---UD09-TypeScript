@@ -1,23 +1,20 @@
+type typeSexo = 'H' | 'M';
+const defSexo = 'H'
+
 class Persona {
-    nombre:string = '';
-    edad:number = 0;
-    DNI:string;
-    sexo:string = 'H';
-    peso:number = 0;
-    altura:number = 0;
+    private nombre:string;
+    private edad:number;
+    private DNI:string;
+    private sexo:typeSexo;
+    private peso:number;
+    private altura:number;
     
-    constructor(nombre:string, edad:number, DNI:string, sexo:string, peso:number, altura:number){
-        this.nombre = nombre;
-        this.edad = edad;
+    constructor(DNI:string){
+        this.nombre = '';
+        this.edad = 0;
         this.DNI = DNI;
-        this.sexo = sexo;
-        this.peso = peso;
-        this.altura = altura;
+        this.sexo = defSexo;
+        this.peso = 0;
+        this.altura = 0;
     }
  }
-
-let pers1 = new Persona('Jhon',23,'12345678E','H',66,170);
-let pers2 = new Persona('Maria',32,'12345674E','M',56,179);
-let pers3 = new Persona('Pedro',23,'12345178E','H',76,180);
-
-console.log(pers1,pers2,pers3);
